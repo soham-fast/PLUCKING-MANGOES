@@ -3,14 +3,15 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
-var dground, tree,treeimg;
-var boy, boyimg;
+var dground, tree,treeImg;
+var boy, boyImg;
 var stones;
 var mango1, mango2, mango3, mango4, mango5, mango6, maango7, mango8, mango9, mango10;
 
 function preload(){
-	treeimg=loadImage("tree.png");
-	boyimg=loadImage("boy.png");
+	
+	treeImg=loadImage("tree.png");
+	boyImg=loadImage("boy.png");
 }
 
 function setup() {
@@ -35,11 +36,11 @@ function setup() {
 	attach=new Throw(stones.body,{x:100,y:465});
 
 	tree=createSprite(775,368);
-	tree.addImage(treeimg);
+	tree.addImage(treeImg);
 	tree.scale=0.42;
 
 	boy=createSprite(160,550);
-	boy.addImage(boyimg);
+	boy.addImage(boyImg);
 	boy.scale=0.125;
 
 	Engine.run(engine);
